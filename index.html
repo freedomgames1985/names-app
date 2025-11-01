@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#2f75b5">
+<title>برنامج إدارة الأسماء</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>:root{--blue-1:#0f62fe;--blue-2:#2f75b5;--dark-border:#1a1a2e;--input-border:#2d2d44}*{box-sizing:border-box;font-family:'Tajawal',sans-serif;-webkit-tap-highlight-color:transparent}body{background:radial-gradient(1400px 500px at 15% 10%,rgba(47,117,181,0.08),transparent),radial-gradient(1000px 400px at 85% 90%,rgba(15,98,254,0.05),transparent),linear-gradient(135deg,#e8f4fd 0%,#f0f8ff 100%);color:#0a2540;padding:24px;margin:0;min-height:100vh}.container{max-width:1200px;margin:0 auto;padding:32px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.85));box-shadow:0 12px 40px rgba(15,98,254,0.12);border:2px solid rgba(47,117,181,0.15)}header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:20px;border-bottom:2px solid rgba(47,117,181,0.1);margin-bottom:24px;flex-wrap:wrap}h1{margin:0;font-size:24px;font-weight:800;color:var(--blue-2);display:flex;align-items:center;gap:12px}.top-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px;padding:20px;background:linear-gradient(135deg,rgba(47,117,181,0.04),rgba(15,98,254,0.02));border-radius:16px;border:1px solid rgba(47,117,181,0.08)}.search-box{flex:1;display:flex;gap:10px;align-items:center;min-width:280px}.search-box input{flex:1;padding:14px 18px;border-radius:12px;border:2px solid var(--input-border);background:rgba(255,255,255,0.95);font-size:15px;font-weight:600;outline:none;transition:all 0.2s}.search-box input:focus{border-color:var(--blue-2);box-shadow:0 0 0 3px rgba(47,117,181,0.15)}.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:12px 20px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--blue-2),var(--blue-1));color:#fff;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 4px 16px rgba(15,98,254,0.25);transition:all .2s;touch-action:manipulation}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(15,98,254,0.35)}.btn:active{transform:translateY(0)}.btn.ghost{background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(250,250,250,0.9));color:var(--blue-2);border:2px solid var(--blue-2);box-shadow:0 2px 8px rgba(47,117,181,0.15)}.btn.ghost:hover{background:linear-gradient(135deg,rgba(47,117,181,0.08),rgba(47,117,181,0.04))}.form-section{background:linear-gradient(135deg,rgba(255,255,255,0.98),rgba(250,250,255,0.95));padding:28px;border-radius:16px;border:2px solid var(--dark-border);box-shadow:0 8px 24px rgba(26,26,46,0.08);margin-bottom:24px}.form-section-title{font-size:18px;font-weight:700;color:var(--dark-border);margin:0 0 20px 0;padding-bottom:12px;border-bottom:2px solid rgba(26,26,46,0.15);display:flex;align-items:center;gap:10px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid-3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}label{display:block;font-size:14px;font-weight:700;margin-bottom:8px;color:var(--dark-border);text-transform:uppercase}.field{display:flex;flex-direction:column}input[type="text"],input[type="number"],textarea,select{padding:14px 16px;border-radius:10px;border:2px solid var(--dark-border);background:rgba(255,255,255,0.98);font-size:15px;font-weight:600;outline:none;transition:all 0.2s}select{cursor:pointer}input:focus,textarea:focus,select:focus{border-color:var(--blue-2);box-shadow:0 0 0 3px rgba(47,117,181,0.2)}textarea{min-height:85px;resize:vertical;font-family:'Tajawal',sans-serif}.actions{display:flex;gap:12px;flex-wrap:wrap;padding:20px;background:rgba(47,117,181,0.03);border-radius:12px;border:1px dashed rgba(47,117,181,0.2);margin-bottom:20px}.small{font-size:13px;color:#5b7388;font-weight:600}.note{margin-top:16px;color:#43627a;font-size:13px;padding:12px;background:rgba(47,117,181,0.04);border-radius:8px;border-right:4px solid var(--blue-2)}.count{font-weight:700;color:#fff;background:linear-gradient(135deg,var(--blue-2),var(--blue-1));padding:8px 16px;border-radius:8px;font-size:14px;box-shadow:0 2px 8px rgba(47,117,181,0.25)}.checklist-section{background:linear-gradient(135deg,rgba(255,255,255,0.98),rgba(250,250,255,0.95));padding:24px;border-radius:16px;border:2px solid var(--dark-border);box-shadow:0 8px 24px rgba(26,26,46,0.08);margin-top:20px}.textarea-check{width:100%;min-height:100px;padding:14px;border-radius:10px;border:2px solid var(--dark-border);background:rgba(255,255,255,0.98);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;transition:all 0.2s}.textarea-check:focus{border-color:var(--blue-2);box-shadow:0 0 0 3px rgba(47,117,181,0.2);outline:none}.modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.6);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:120}.modal{background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));border-radius:16px;max-width:950px;width:100%;padding:28px;box-shadow:0 30px 80px rgba(8,30,64,0.25);border:2px solid var(--dark-border);max-height:80vh;overflow-y:auto}.modal h3{margin:0 0 16px;color:var(--blue-2);font-size:20px;font-weight:800}.modal pre{white-space:pre-wrap;font-family:'Tajawal',sans-serif;color:#0b2540;background:#f8fbff;padding:16px;border-radius:10px;border:2px solid rgba(47,117,181,0.1);font-size:14px;line-height:1.6}.close{background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(250,250,250,0.9));color:var(--blue-2);border-radius:8px;padding:8px 16px;border:2px solid var(--blue-2);cursor:pointer;font-weight:700;transition:all 0.2s}.close:hover{background:var(--blue-2);color:#fff}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.print-options{display:none;position:fixed;right:20px;top:80px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(26,26,46,0.12);z-index:200;border:2px solid var(--blue-2)}.print-options h4{margin:0 0 12px;color:var(--blue-2)}.print-options button{display:block;width:100%;margin:6px 0}.data-table{width:100%;border-collapse:collapse;margin-top:16px}.data-table th,.data-table td{border:2px solid rgba(47,117,181,0.2);padding:10px;text-align:right}.data-table th{background:linear-gradient(135deg,var(--blue-2),var(--blue-1));color:#fff;font-weight:700}.data-table td[contenteditable="true"]{background:rgba(255,255,255,0.95);cursor:text}.data-table td[contenteditable="true"]:hover{background:rgba(47,117,181,0.05)}.data-table td[contenteditable="true"]:focus{outline:2px solid var(--blue-2);background:#fff}.print-gender-options{margin:12px 0;padding:12px;background:rgba(47,117,181,0.04);border-radius:8px;border:1px solid rgba(47,117,181,0.2)}.print-gender-options label{display:block;margin:8px 0;font-weight:600;cursor:pointer;font-size:14px;text-transform:none}
+
+/* === تحسينات الهاتف والآيباد === */
+@media (max-width:768px){
+body{padding:12px}
+.container{padding:16px;border-radius:12px}
+h1{font-size:18px}
+.btn{padding:14px 18px;font-size:15px;min-height:48px}
+input,textarea,select{padding:16px;font-size:16px;min-height:48px}
+.grid,.grid-3{grid-template-columns:1fr!important;gap:12px}
+.toolbar{flex-direction:column;align-items:stretch;width:100%}
+.toolbar .btn{width:100%;margin:4px 0}
+.data-table th,.data-table td{padding:8px;font-size:13px}
+.modal{max-width:95%;padding:16px;max-height:85vh}
+.search-box{min-width:100%}
+.top-row{padding:12px;flex-direction:column;align-items:stretch}
+.form-section{padding:16px}
+.actions{padding:12px;gap:8px}
+.actions .btn{width:100%;margin:4px 0}
+header{flex-direction:column;align-items:stretch}
+.print-options{right:10px;left:10px;top:60px;width:auto}
+.count{text-align:center}
+}
+
+@media (min-width:769px) and (max-width:1024px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🧊 برنامج إدارة الأسماء</h1>
+<div class="toolbar">
+<span class="count" id="countLabel">إجمالي: 0</span>
+<button id="viewAllBtn" class="btn">📋 عرض الكل</button>
+<button id="exportAllBtn" class="btn">📤 تصدير</button>
+<button id="showMissingBtn" class="btn ghost">📉 الناقصة</button>
+<button id="restoreBtn" class="btn ghost">🔁 استرداد</button>
+<button id="printBtn" class="btn ghost">🖨️ طباعة</button>
+</div>
+</header>
+<div class="top-row">
+<div class="search-box">
+<input id="searchInput" placeholder="🔍 ابحث..." autocomplete="off">
+<button id="searchBtn" class="btn">بحث</button>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;width:100%">
+<button id="exportCSV" class="btn ghost" style="flex:1">⬇️ نسخة احتياطية</button>
+<button id="importCSV" class="btn" style="flex:1">⬆️ استيراد</button>
+</div>
+</div>
+<div class="form-section">
+<h2 class="form-section-title">📝 بيانات السجل</h2>
+<div class="grid">
+<div class="field"><label for="name">الاسم</label><input id="name" type="text" placeholder="أدخل الاسم" autocomplete="off"/></div>
+<div class="field"><label for="qty">الكمية</label><input id="qty" type="number" min="0" placeholder="الكمية"/></div>
+<div class="field"><label for="gender">الجنس</label><select id="gender"><option value="">اختر</option><option value="ذكر">👦 ذكر</option><option value="أنثى">👧 أنثى</option></select></div>
+<div class="field"><label for="color">اللون</label><input id="color" type="text" placeholder="اللون" autocomplete="off"/></div>
+</div>
+<div style="margin-top:18px"><div class="field"><label for="note">الملاحظات</label><textarea id="note" placeholder="ملاحظات إضافية"></textarea></div></div>
+</div>
+<div class="actions">
+<button id="addBtn" class="btn">➕ إضافة</button>
+<button id="queryBtn" class="btn ghost">🔎 استعلام</button>
+<button id="editBtn" class="btn">✏️ تعديل</button>
+<button id="deleteBtn" class="btn ghost">🗑 حذف</button>
+<button id="exportMissingBtn" class="btn">💾 تصدير الناقصة</button>
+</div>
+<div class="form-section">
+<h2 class="form-section-title">🛒 عملية البيع</h2>
+<div class="grid-3">
+<div class="field"><label for="sellName">اسم المنتج</label><input id="sellName" type="text" placeholder="الاسم" autocomplete="off"/></div>
+<div class="field"><label for="sellQty">الكمية</label><input id="sellQty" type="number" min="1" placeholder="الكمية"/></div>
+<div class="field"><label style="opacity:0">.</label><button id="sellQueryBtn" class="btn ghost" style="width:100%">🔍 استعلام</button></div>
+</div>
+<div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button id="sellBtn" class="btn" style="flex:1">💰 تنفيذ البيع</button></div>
+</div>
+<div class="checklist-section">
+<h2 class="form-section-title">📋 التحقق من قائمة</h2>
+<label class="small" style="margin-bottom:10px;display:block">الصق الأسماء (سطر لكل اسم)</label>
+<textarea id="checkList" class="textarea-check" placeholder="مثال:&#10;خالد&#10;أحمد&#10;محمد"></textarea>
+<div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+<button id="checkNamesBtn" class="btn" style="flex:1">🔎 تحقق</button>
+<button id="exportMissingCheckedBtn" class="btn ghost" style="flex:1">⬇️ تصدير الناقصة</button>
+<button id="clearListBtn" class="btn ghost">🧹 مسح</button>
+</div>
+</div>
+<p class="note">💡 البيانات محفوظة محلياً. يمكنك التصدير لحفظ نسخة احتياطية.</p>
+</div>
+
+<div id="printOptions" class="print-options">
+<h4>خيارات الطباعة</h4>
+<div class="print-gender-options">
+<label><input type="radio" name="printGender" value="all" checked> الكل</label>
+<label><input type="radio" name="printGender" value="ذكر"> ذكور</label>
+<label><input type="radio" name="printGender" value="أنثى"> إناث</label>
+</div>
+<button id="printAllBtn" class="btn">🖨️ طباعة الكل</button>
+<button id="printMissingBtn" class="btn ghost">📋 طباعة الناقصة</button>
+<button id="printCheckedMissingBtn" class="btn ghost">📥 طباعة ناقصة القائمة</button>
+<button id="printCloseBtn" class="btn ghost">إغلاق</button>
+</div>
+
+<div id="modal" class="modal-backdrop">
+<div class="modal">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+<h3 id="modalTitle">عنوان</h3>
+<div style="display:flex;gap:8px"><button id="modalDownload" class="btn" style="display:none">⬇️ تحميل</button><button id="modalClose" class="close">إغلاق</button></div>
+</div>
+<div><pre id="modalText"></pre></div>
+</div>
+</div>
+
+<div id="viewAllModal" class="modal-backdrop">
+<div class="modal" style="max-width:1100px">
+<div style="text-align:center;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid rgba(47,117,181,0.2)">
+<h3 style="margin:12px 0 0 0;color:var(--blue-2);font-size:22px">📋 جميع الأسماء (قابلة للتعديل)</h3>
+</div>
+<div style="display:flex;gap:8px;margin-bottom:16px;justify-content:center;flex-wrap:wrap">
+<button id="saveTableBtn" class="btn">💾 حفظ</button>
+<button id="viewAllClose" class="close">إغلاق</button>
+</div>
+<div style="overflow-x:auto">
+<table class="data-table" id="dataTable">
+<thead>
+<tr>
+<th>#</th>
+<th>الاسم</th>
+<th>الكمية</th>
+<th>الجنس</th>
+<th>اللون</th>
+<th>ملاحظات</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody>
+</table>
+</div>
+<p class="note" style="margin-top:16px">💡 انقر على أي خلية للتعديل</p>
+</div>
+</div>
+
+<input id="fileInput" type="file" accept=".csv" style="display:none"/>
+
+<script>
+const STORAGE_KEY='md_program_db_v3';let db=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');const el={search:document.getElementById('searchInput'),searchBtn:document.getElementById('searchBtn'),add:document.getElementById('addBtn'),query:document.getElementById('queryBtn'),edit:document.getElementById('editBtn'),del:document.getElementById('deleteBtn'),exportCSV:document.getElementById('exportCSV'),importCSV:document.getElementById('importCSV'),exportAll:document.getElementById('exportAllBtn'),showMissing:document.getElementById('showMissingBtn'),exportMissing:document.getElementById('exportMissingBtn'),restore:document.getElementById('restoreBtn'),count:document.getElementById('countLabel'),name:document.getElementById('name'),gender:document.getElementById('gender'),qty:document.getElementById('qty'),color:document.getElementById('color'),note:document.getElementById('note'),sellName:document.getElementById('sellName'),sellQty:document.getElementById('sellQty'),sell:document.getElementById('sellBtn'),sellQuery:document.getElementById('sellQueryBtn'),checkList:document.getElementById('checkList'),checkNames:document.getElementById('checkNamesBtn'),exportMissingChecked:document.getElementById('exportMissingCheckedBtn'),clearList:document.getElementById('clearListBtn'),modal:document.getElementById('modal'),modalText:document.getElementById('modalText'),modalTitle:document.getElementById('modalTitle'),modalClose:document.getElementById('modalClose'),modalDownload:document.getElementById('modalDownload'),fileInput:document.getElementById('fileInput'),printBtn:document.getElementById('printBtn'),printOptions:document.getElementById('printOptions'),printAllBtn:document.getElementById('printAllBtn'),printMissingBtn:document.getElementById('printMissingBtn'),printCheckedMissingBtn:document.getElementById('printCheckedMissingBtn'),printCloseBtn:document.getElementById('printCloseBtn'),viewAllBtn:document.getElementById('viewAllBtn'),viewAllModal:document.getElementById('viewAllModal'),viewAllClose:document.getElementById('viewAllClose'),saveTableBtn:document.getElementById('saveTableBtn'),tableBody:document.getElementById('tableBody')};if(db.length===0){db=[{name:'خالد',gender:'ذكر',qty:25,color:'أزرق',note:'مقاس صغير'},{name:'خالدة',gender:'أنثى',qty:10,color:'أحمر',note:'مخصصة'},{name:'أحمد',gender:'ذكر',qty:0,color:'أخضر',note:'ناقص'},{name:'فاطمة',gender:'أنثى',qty:15,color:'وردي',note:''}];saveDB()}updateCount();function showModal(t,txt,blob=null,fname='data.csv'){el.modalTitle.textContent=t;el.modalText.textContent=txt;if(blob){el.modalDownload.style.display='inline-flex';el.modalDownload.onclick=()=>{const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=fname;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}}else{el.modalDownload.style.display='none';el.modalDownload.onclick=null}el.modal.style.display='flex'}function closeModal(){el.modal.style.display='none'}el.modalClose.onclick=closeModal;el.modal.onclick=e=>{if(e.target===el.modal)closeModal()};function saveDB(){localStorage.setItem(STORAGE_KEY,JSON.stringify(db));updateCount()}function updateCount(){el.count.textContent=`إجمالي: ${db.length}`}function clearInputs(){el.name.value='';el.gender.value='';el.qty.value='';el.color.value='';el.note.value=''}function addEntry(){const name=el.name.value.trim();if(!name){showModal('⚠️ تنبيه','الرجاء إدخال الاسم');return}const gender=el.gender.value;if(!gender){showModal('⚠️ تنبيه','الرجاء اختيار الجنس');return}if(db.some(r=>r.name.toLowerCase()===name.toLowerCase())){showModal('⚠️ تنبيه','هذا الاسم موجود مسبقًا');return}const qty=Number(el.qty.value)||0;const color=el.color.value.trim();const note=el.note.value.trim();db.push({name,gender,qty,color,note});saveDB();clearInputs();showModal('✅ تم الإضافة',`${name}\nالكمية: ${qty}\nالجنس: ${gender}`)}function searchEntries(){const q=el.search.value.trim();if(!q){showModal('⚠️ تنبيه','أدخل نص للبحث');return}const results=db.filter(r=>(r.name||'').toLowerCase().includes(q.toLowerCase()));if(results.length===0){showModal('⚠️ غير موجود',`لا نتائج لـ "${q}"`)}else{let text=`عدد النتائج: ${results.length}\n\n`;results.forEach((r,i)=>{text+=`${i+1}) ${r.name}\n   الكمية: ${r.qty}\n   الجنس: ${r.gender||'-'}\n   اللون: ${r.color}\n\n`});showModal('📋 نتائج البحث',text)}}function queryPopulate(){const q=el.search.value.trim();if(!q){showModal('⚠️ تنبيه','أدخل الاسم');return}const found=db.find(r=>r.name.toLowerCase()===q.toLowerCase());if(!found){showModal('⚠️ غير موجود',`لا يوجد "${q}"`);return}el.name.value=found.name;el.gender.value=found.gender||'';el.qty.value=found.qty;el.color.value=found.color;el.note.value=found.note;showModal('✅ تم',`تم تعبئة: ${found.name}`)}function editEntry(){const name=el.name.value.trim();if(!name){showModal('⚠️ تنبيه','أدخل الاسم');return}const gender=el.gender.value;if(!gender){showModal('⚠️ تنبيه','اختر الجنس');return}const idx=db.findIndex(r=>r.name.toLowerCase()===name.toLowerCase());if(idx===-1){showModal('⚠️ غير موجود',`لا يوجد "${name}"`);return}const qty=Number(el.qty.value)||0;const color=el.color.value.trim();const note=el.note.value.trim();db[idx]={name,gender,qty,color,note};saveDB();clearInputs();showModal('✅ تم التعديل',`تم تعديل: ${name}`)}function deleteEntry(){const name=el.name.value.trim();if(!name){showModal('⚠️ تنبيه','أدخل الاسم');return}const idx=db.findIndex(r=>r.name.toLowerCase()===name.toLowerCase());if(idx===-1){showModal('⚠️ غير موجود',`لا يوجد "${name}"`);return}if(!confirm(`حذف "${name}"؟`))return;db.splice(idx,1);saveDB();clearInputs();showModal('✅ تم الحذف',`تم حذف: ${name}`)}function exportAll(){if(db.length===0){showModal('⚠️ تنبيه','لا بيانات');return}let text='جميع السجلات:\n\n';db.forEach((r,i)=>{text+=`${i+1}) ${r.name} | ${r.qty} | ${r.gender||'-'} | ${r.color}\n`});showModal('📋 جميع السجلات',text)}function showMissing(){const missing=db.filter(r=>r.qty===0);if(missing.length===0){showModal('✅ لا ناقصة','الكل متوفر');return}let text=`عدد: ${missing.length}\n\n`;missing.forEach((r,i)=>{text+=`${i+1}) ${r.name} | ${r.gender||'-'} | ${r.color}\n`});showModal('📉 الناقصة',text)}function exportMissing(){const missing=db.filter(r=>r.qty===0);if(missing.length===0){showModal('✅ لا ناقصة','الكل متوفر');return}let csv='الاسم,الكمية,الجنس,اللون,ملاحظات\n';missing.forEach(r=>{csv+=`${r.name},${r.qty},${r.gender||''},${r.color},"${r.note||''}"\n`});const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'});showModal('💾 تصدير',`${missing.length} سجل`,blob,'الناقصة.csv')}function exportToCSV(){if(db.length===0){showModal('⚠️ تنبيه','لا بيانات');return}let csv='الاسم,الكمية,الجنس,اللون,ملاحظات\n';db.forEach(r=>{csv+=`${r.name},${r.qty},${r.gender||''},${r.color},"${r.note||''}"\n`});const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset
